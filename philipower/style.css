@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* .oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* .roboto-slab-<uniquifier> {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* Reset  */
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: url(images/if.jpg) center/cover;
+    min-height: 100vh;
+}
+
+    main {
+        flex: 1;
+    }
+
+/* La navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #999999ce;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.5rem + 1.5vw);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    color: white;
+    font-size: 20px;
+}
+nav h3 {
+    font-family: wide latin, serif;
+    font-size: 25px;
+    color: yellow;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+nav ul a {
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+nav ul a:hover {
+    color: yellow;
+    transition: 0.25s;
+}
+
+/* Le boutons : Hamburger, Fermeture */
+#menubtn {
+    cursor: pointer;
+    display: none;
+}
+
+ /*La page d'accueil */
+ /* Mobile first  */
+     .heroAccueil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px 20px;
+        text-align: center;
+     }
+
+     .heroAccueil h1 {
+        color: yellow;
+        font-size: 2.5rem;
+     }
+
+     .leftpart span {
+        text-transform: uppercase;
+        font-weight: 900;
+     }
+     .leftpart {
+        flex: 1;
+     }
+
+     .leftpart .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 14px 28px;
+        background-color: #007bff;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px;
+     }
+
+     .leftpart .btn a {
+        color: white;
+     }
+
+     .leftpart .btn:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+     }
+
+     .btn:active {
+         transform: translate((-1px)); 
+      } 
+
+     .rightpart {
+        flex: 1;
+        width: 100%;
+     }
+
+     .rightpart img {
+        background: none;
+        height: auto;
+        width: 60%;
+     }
+
+     /* page sèvis  */
+     .hero-sevis {
+        margin-top: 150px;
+     }
+     .sevis h2 {
+        font-size: 1.5rem;
+        color: yellow;
+        text-align: center;
+        margin-top: 40px;
+     }
+
+      .sevis p {
+        color: white;
+        font-size: 1rem;
+        margin: 0 auto auto 40px;
+     }
+
+     .sevis li {
+        color: yellow;
+        margin: 0 auto auto 15px;
+        padding-top: 5px;
+     }
+
+     /* Page enskription */
+     .form-section {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        min-height: 80vh;
+        padding: 20px;
+     }
+
+     .form-container {
+        width: 100%;
+        max-width: 450px;
+        background: #ffffff62;
+        padding: 40px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+     }
+
+     .form-container h2 {
+        color: skyblue;
+     }
+    
+     .form-container input, button, textarea {
+        margin-top: 10px;
+     }
+
+     .form-container button {
+        color: white;
+        font-weight: 900;
+        background: skyblue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding:10px 20px;
+     }
+/* Pied de page */
+footer {
+    background-color: blue;
+}
+
+.heroFooter {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h4 {
+    font-family: wide latin, serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.left p {
+    color: white;
+}
+
+.footerLien {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLien a {
+    color: white;
+}
+
+/* Responsive barre navigation*/
+@media (max-width:600px) {
+    #menubtn {
+        display: block;
+    }
+    #menubtn::before {
+        content: "\2630";
+    }
+    .active #menubtn::before {
+        content: "\2715";
+    }
+    nav ul {
+        position: fixed;
+        right: -100%;
+        top: 8%;
+        display: flex;
+        flex-direction: column;
+        background: #999999ce;
+        width: 100%;
+        text-align: center;
+        transition: 0.25s;
+    }
+    nav li {
+        padding: 3px 0;
+    }
+    nav ul li:hover {
+        background: rgb(149, 199, 219);
+    }
+    nav.active ul {
+        left: 0;
+    }  
+}
+/* Responsive page d'accuei */
+@media (min-width:768px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        flex: 1;
+    }
+    .heroAccueil {
+        flex-direction: row;
+        text-align: left;
+        max-width: 1200px;
+        margin: 110px 0 30px auto;
+        padding: 80px 40px;
+    }
+    .leftpart .btn {
+        margin-top: 20px;
+        width: 25%;
+        box-sizing: border-box;
+    }
+}
